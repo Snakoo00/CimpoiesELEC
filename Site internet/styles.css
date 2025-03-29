@@ -335,7 +335,7 @@ button:hover {
     }
 
     .nav-button {
-        margin-bottom: 10px; /* Espace entre le bouton et le menu */
+        margin-bottom: 5px; /* Espace entre le bouton et le menu */
     }
 
     /* Menu de navigation */
