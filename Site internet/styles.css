@@ -341,25 +341,25 @@ button:hover {
 
     /* Menu de navigation */
     nav ul {
-        flex-direction: column;  /* Menu vertical */
-        margin-left: 0;
-        text-align: center;
-        width: 100%; /* Assurer que le menu prend toute la largeur de l'écran */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%; /* Assure que le menu prend toute la largeur de l'écran */
     }
 
-    /* Mise en page sur deux lignes pour les éléments du menu */
     nav ul li {
-        margin: 10px 0;  /* Espacement plus grand entre les éléments du menu */
-        width: 50%; /* Chaque élément occupe la moitié de la largeur */
+        display: inline-block; /* Affiche les éléments horizontalement */
+        width: 50%; /* Chaque élément occupe la moitié de la largeur de l'écran */
+        margin-bottom: 10px; /* Espace vertical entre les éléments */
+        text-align: center; /* Centre les éléments dans la liste */
     }
 
-    /* Les liens du menu */
     nav ul li a {
         color: white;
         text-decoration: none;
         font-weight: bold;
-        font-size: 1.2rem;  /* Augmente la taille des liens pour les rendre plus lisibles */
-        display: block; /* Assure que chaque élément prend toute la largeur du container */
+        font-size: 1.2rem;
+        display: block; /* Assure que chaque élément occupe toute la largeur disponible */
         text-align: center; /* Centre les liens */
     }
 
@@ -367,8 +367,7 @@ button:hover {
     .call-icon {
         display: flex;
         justify-content: center;
-        margin-top: 15px;
-        width: 100%;
+        margin-top: 20px; /* Espacement entre la deuxième ligne du menu et les icônes */
     }
 
     .call-icon i {
