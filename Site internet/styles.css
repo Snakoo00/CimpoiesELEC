@@ -345,13 +345,15 @@ button:hover {
         padding: 0;
         margin: 0;
         width: 100%; /* Assure que le menu prend toute la largeur de l'écran */
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+        justify-content: center; /* Centre le contenu */
     }
 
     nav ul li {
-        display: inline-block; /* Affiche les éléments horizontalement */
-        width: 50%; /* Chaque élément occupe la moitié de la largeur de l'écran */
+        width: 50%; /* Chaque élément occupe 50% de la largeur */
         margin-bottom: 10px; /* Espace vertical entre les éléments */
-        text-align: center; /* Centre les éléments dans la liste */
+        text-align: center; /* Centre les éléments */
     }
 
     nav ul li a {
@@ -368,6 +370,7 @@ button:hover {
         display: flex;
         justify-content: center;
         margin-top: 20px; /* Espacement entre la deuxième ligne du menu et les icônes */
+        width: 100%; /* Prend toute la largeur */
     }
 
     .call-icon i {
@@ -458,3 +461,4 @@ button:hover {
         font-size: 14px; /* Réduit la taille du texte */
     }
 }
+
