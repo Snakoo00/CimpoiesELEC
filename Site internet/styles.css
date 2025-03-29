@@ -307,7 +307,7 @@ button:hover {
 /* Conteneur de l'icône de téléphone */
 .call-icon i {
     font-size: 24px; /* Taille de l'icône */
-	padding: 10px 22px;
+    padding: 10px 22px;
     color: #FFD700; /* Couleur jaune #FFD700 */
     transition: color 0.3s ease; /* Transition lors du survol */
 }
@@ -319,4 +319,66 @@ button:hover {
 
 .call-icon a {
     text-decoration: none; /* Supprime le soulignement */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .service-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .map-container, .zones-text {
+        max-width: 100%;
+    }
+
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .service-item {
+        font-size: 1rem;
+    }
+
+    .zones-text h2 {
+        font-size: 20px;
+    }
+
+    .zones-text p {
+        font-size: 14px;
+    }
 }
