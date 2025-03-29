@@ -18,9 +18,14 @@ header {
 }
 
 header h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.8rem;
+    font-family: 'Lobster', cursive;  /* Utilisation de la police Lobster */
+    font-size: 3.5rem; /* Taille de la police du titre */
+    font-weight: bold; /* Mettre le titre en gras */
+    color: #FFD700; /* Couleur dorée (tu peux ajuster selon tes préférences) */
+    text-transform: uppercase; /* Mettre le titre en majuscules */
+    letter-spacing: 2px; /* Espacement des lettres pour un style plus marqué */
+    margin: 0; /* Annule les marges par défaut */
+    padding: 0; /* Annule les padding par défaut */
 }
 
 /* Styles pour le bouton de téléphone à gauche */
