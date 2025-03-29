@@ -17,16 +17,18 @@ header {
     color: white;
 }
 
+/* Appliquer la police sans-serif au titre "Simion Électricité" */
 header h1 {
-    font-family: 'Lobster', cursive;  /* Utilisation de la police Lobster */
-    font-size: 3.5rem; /* Taille de la police du titre */
-    font-weight: bold; /* Mettre le titre en gras */
-    color: #FFD700; /* Couleur dorée (tu peux ajuster selon tes préférences) */
-    text-transform: uppercase; /* Mettre le titre en majuscules */
-    letter-spacing: 2px; /* Espacement des lettres pour un style plus marqué */
-    margin: 0; /* Annule les marges par défaut */
-    padding: 0; /* Annule les padding par défaut */
+    font-family: 'Poppins', sans-serif;  /* Utilisation de Montserrat pour un look moderne */
+    font-size: 3rem; /* Ajuste la taille de la police */
+    font-weight: 600; /* Poids de la police pour un aspect plus robuste */
+    color: #FFD700; /* Couleur dorée pour un style professionnel */
+    text-transform: uppercase; /* Mettre le titre en majuscules pour plus de professionnalisme */
+    letter-spacing: 1.5px; /* Espacement des lettres pour un look propre */
+    margin: 0;
+    padding: 0;
 }
+
 
 /* Styles pour le bouton de téléphone à gauche */
 .nav-button {
