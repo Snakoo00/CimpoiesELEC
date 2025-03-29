@@ -66,9 +66,7 @@ nav ul li a {
     text-align: center;
     padding: 80px 20px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.6); /* Assure une visibilité correcte du texte */
-    background-size: cover; /* Assure que l'image couvre toute la section */
-    background-position: center center; /* Centrage de l'image */
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .hero h2 {
@@ -142,7 +140,7 @@ footer {
 .hero {
     position: relative;
     background-image: url('photo/back_intro.webp');
-    background-size: cover;  /* Utilisation de cover pour une meilleure adaptabilité */
+    background-size: 100%;
     background-position: center 39%;
     color: white;
     padding: 180px 20px;
@@ -309,7 +307,7 @@ button:hover {
 /* Conteneur de l'icône de téléphone */
 .call-icon i {
     font-size: 24px; /* Taille de l'icône */
-    padding: 10px 22px;
+	padding: 10px 22px;
     color: #FFD700; /* Couleur jaune #FFD700 */
     transition: color 0.3s ease; /* Transition lors du survol */
 }
@@ -321,44 +319,4 @@ button:hover {
 
 .call-icon a {
     text-decoration: none; /* Supprime le soulignement */
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    /* Section Hero */
-    .hero {
-        padding: 120px 20px;
-        background-position: center 40%;  /* Ajuste légèrement pour avoir une meilleure vue de l'image */
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero .btn {
-        font-size: 0.9rem;
-        padding: 8px 15px;
-    }
-
-    /* Menu */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Call button */
-    .call-button {
-        bottom: 10px;
-        right: 10px;
-        padding: 12px;
-    }
 }
