@@ -15,6 +15,7 @@ header {
     padding: 10px 20px;
     background-color: #333; /* Ajuste la couleur si besoin */
     color: white;
+    position: relative;
 }
 
 header h1 {
@@ -23,9 +24,8 @@ header h1 {
     font-size: 1.8rem;
 }
 
-/* Styles pour le bouton de téléphone à gauche */
 .nav-button {
-    margin-right: 20px; /* Espace entre le bouton et le menu */
+    display: none; /* Masque le bouton de téléphone dans le header sur mobile */
 }
 
 .nav-button .call-button {
@@ -47,7 +47,7 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    margin-left: 20px; /* Espace entre le bouton et les éléments du menu */
+    margin-left: 20px;
 }
 
 nav ul li {
@@ -62,30 +62,50 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
-    background: url('electricien-bg.jpg') no-repeat center center/cover;
-    text-align: center;
-    padding: 80px 20px;
+    position: relative;
+    background-image: url('photo/back_intro.webp');
+    background-size: cover;
+    background-position: center;
     color: white;
-    background-color: rgba(0, 0, 0, 0.6);
+    padding: 180px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh; /* Hauteur de l'écran complet */
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Gris foncé avec une opacité de 50% */
+    z-index: 1; /* S'assurer que l'overlay est au-dessus de l'image */
+}
+
+.hero h2, .hero p, .hero .btn {
+    position: relative; /* Pour que le texte soit au-dessus de l'overlay */
+    z-index: 2;
 }
 
 .hero h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #f39c12;
     padding: 10px 20px;
-    background-color: #FFD700;
-    color: #00274D;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
     border-radius: 5px;
-    margin-top: 10px;
-}
-
-.btn:hover {
-    background-color: #FFA500;
+    font-size: 1rem;
 }
 
 /* Sections */
@@ -135,52 +155,6 @@ footer {
     background-color: #00274D;
     color: white;
     margin-top: 20px;
-}
-
-.hero {
-    position: relative;
-    background-image: url('photo/back_intro.webp');
-    background-size: 100%;
-    background-position: center 39%;
-    color: white;
-    padding: 180px 20px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Gris foncé avec une opacité de 50% */
-    z-index: 1; /* S'assurer que l'overlay est au-dessus de l'image */
-}
-
-.hero h2, .hero p, .hero .btn {
-    position: relative; /* Pour que le texte soit au-dessus de l'overlay */
-    z-index: 2;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero .btn {
-    background-color: #f39c12;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    font-size: 1rem;
 }
 
 /* Section Zones d’intervention avec fond blanc */
@@ -334,6 +308,15 @@ button:hover {
         margin-top: 10px;
     }
 
+    .hero {
+        padding: 120px 20px;
+        background-position: center center; /* Ajuste l'image pour qu'elle ne soit pas coupée */
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
     .service-list {
         flex-direction: column;
         gap: 15px;
@@ -348,10 +331,6 @@ button:hover {
         max-width: 100%;
     }
 
-    .hero {
-        padding: 120px 20px;
-    }
-
     .form-container {
         padding: 15px;
     }
@@ -359,11 +338,16 @@ button:hover {
     button {
         padding: 10px;
     }
+
+    .call-button {
+        bottom: 10px;
+        right: 10px;
+    }
 }
 
 @media (max-width: 480px) {
     .hero h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero p {
@@ -380,5 +364,10 @@ button:hover {
 
     .zones-text p {
         font-size: 14px;
+    }
+
+    .call-button {
+        bottom: 15px;
+        right: 15px;
     }
 }
