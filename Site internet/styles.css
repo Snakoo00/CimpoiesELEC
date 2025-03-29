@@ -337,14 +337,39 @@ button:hover {
         margin-bottom: 10px; /* Espace entre le bouton et le menu */
     }
 
+    /* Menu de navigation */
     nav ul {
-        flex-direction: column;
+        flex-direction: column;  /* Menu vertical */
         margin-left: 0;
         text-align: center;
+        width: 100%; /* Assurer que le menu prend toute la largeur de l'écran */
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 10px 0;  /* Espacement plus grand entre les éléments du menu */
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;  /* Augmente la taille des liens pour les rendre plus lisibles */
+    }
+
+    /* Ajustement du bouton de téléphone */
+    .call-icon {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .call-icon i {
+        font-size: 28px;  /* Agrandit l'icône pour plus de visibilité */
+        color: #FFD700;
+    }
+
+    .call-icon a {
+        margin: 0 10px;
     }
 
     /* Hero Section */
@@ -425,4 +450,3 @@ button:hover {
         font-size: 14px; /* Réduit la taille du texte */
     }
 }
-
