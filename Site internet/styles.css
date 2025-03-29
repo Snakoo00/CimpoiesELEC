@@ -320,6 +320,7 @@ button:hover {
 .call-icon a {
     text-decoration: none; /* Supprime le soulignement */
 }
+
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
     /* Header */
@@ -357,7 +358,13 @@ button:hover {
         font-size: 1.2rem;  /* Augmente la taille des liens pour les rendre plus lisibles */
     }
 
-    /* Ajustement du bouton de téléphone */
+    /* Disposition sur 2 lignes pour les éléments du menu */
+    nav ul li:nth-child(1),
+    nav ul li:nth-child(2) {
+        margin-bottom: 20px; /* Plus d'espace entre les lignes */
+    }
+
+    /* Disposition des logos */
     .call-icon {
         display: flex;
         justify-content: center;
@@ -451,3 +458,4 @@ button:hover {
         font-size: 14px; /* Réduit la taille du texte */
     }
 }
+
