@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages - Électricien Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Style général des étoiles */
+        .etoiles {
+            font-size: 40px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        /* Style pour les étoiles remplies (actives) */
+        .etoile.active {
+            color: gold;
+        }
+
+        /* Assurer que la zone de texte est bien dimensionnée */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Zone de texte pour les témoignages */
+        textarea {
+            height: 150px;  /* Taille de la zone de texte pour le témoignage */
+        }
+
+        /* Message d'explication */
+        .explication {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚡ Électricien Pro</h1>
+        <nav>
+            <ul>
+                <li><a href="Site.html#accueil">Accueil</a></li>
+                <li><a href="Site.html#services">Services</a></li>
+                <li><a href="Site.html#apropos">À propos</a></li>
+                <li><a href="temoignages.html">Témoignages</a></li>
+                <li><a href="Site.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+   <section id="temoignages" class="section">
+        <h2>Ajoutez votre témoignage</h2>
+        <div id="liste-temoignages">
+            <blockquote>Votre avis ne sera pas publié publiquement. <br>Il sera envoyé par email pour permettre à notre équipe de s'améliorer et de mieux vous servir à l'avenir.</blockquote>
+        </div>		
+        <form action="envoyer_email.php" method="post">
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            <textarea id="message" name="message" placeholder="Votre témoignage" required></textarea>
+
+            <div class="etoiles">
+                <span class="etoile" onclick="setRating(1)" onmouseover="handleHover(0)" onmouseout="resetHover()">&#9734;</span>
+                <span class="etoile" onclick="setRating(2)" onmouseover="handleHover(1)" onmouseout="resetHover()">&#9734;</span>
+                <span class="etoile" onclick="setRating(3)" onmouseover="handleHover(2)" onmouseout="resetHover()">&#9734;</span>
+                <span class="etoile" onclick="setRating(4)" onmouseover="handleHover(3)" onmouseout="resetHover()">&#9734;</span>
+                <span class="etoile" onclick="setRating(5)" onmouseover="handleHover(4)" onmouseout="resetHover()">&#9734;</span>
+            </div>
+            <input type="hidden" name="rating" id="rating">
+            <p class="explication">Merci pour votre contribution !</p>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+	
+    <footer>
+        <p>&copy; 2025 Électricien Pro - Tous droits réservés</p>
+    </footer>
+  <script>
+        let rating = 0;
+
+        function setRating(starIndex) {
+            rating = starIndex;
+            document.getElementById('rating').value = rating;
+
+            let etoiles = document.querySelectorAll('.etoile');
+            for (let i = 0; i < etoiles.length; i++) {
+                if (i < starIndex) {
+                    etoiles[i].classList.add('active');
+                } else {
+                    etoiles[i].classList.remove('active');
+                }
+            }
+        }
+
+        function handleHover(starIndex) {
+            let etoiles = document.querySelectorAll('.etoile');
+            for (let i = 0; i < etoiles.length; i++) {
+                if (i <= starIndex) {
+                    etoiles[i].classList.add('active');
+                } else {
+                    etoiles[i].classList.remove('active');
+                }
+            }
+        }
+
+        function resetHover() {
+            let etoiles = document.querySelectorAll('.etoile');
+            for (let i = 0; i < etoiles.length; i++) {
+                if (i < rating) {
+                    etoiles[i].classList.add('active');
+                } else {
+                    etoiles[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

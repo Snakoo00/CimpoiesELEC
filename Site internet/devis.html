@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simion Électricité</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1>⚡ Simion Électricité</h1>
+    <nav>
+        <ul>
+            <li><a href="Site.html#accueil">Accueil</a></li>
+            <li><a href="Site.html#services">Services</a></li>
+            <li><a href="Site.html#apropos">À propos</a></li>
+            <li><a href="Site.html#contact">Contact</a></li>
+        </ul>
+		<!-- Icône de téléphone -->
+        <div class="call-icon">
+            <a href="tel:+33638315784"><i class="fas fa-phone-alt"></i></a> <!-- Numéro à remplacer -->
+			 <a href="mailto:contact@exemple.com" class="contact-icon"><i class="fas fa-envelope"></i></a> <!-- Icône de mail -->
+        </div>
+</header>
+    
+    <section id="devis" class="container">
+        <div class="form-container">
+            <h2>Demande de Devis</h2>
+            <p>Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé.</p>
+            
+            <form action="envoyer_devis.php" method="post">
+                <label for="nom">Nom et prénom *</label>
+                <input type="text" id="nom" name="nom" required>
+                
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telephone">Téléphone *</label>
+                <input type="tel" id="telephone" name="telephone" required>
+                
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse" name="adresse">
+                
+                <label for="service">Type de service *</label>
+                <select id="service" name="service" required>
+                    <option value="installation">Installation électrique</option>
+                    <option value="depannage">Dépannage</option>
+                    <option value="renovation">Rénovation</option>
+                    <option value="autre">Autre</option>
+                </select>
+                
+                <label for="message">Détail de votre demande *</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Envoyer la demande</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright &copy; 2025 Simion Électricité</p>
+    </footer>
+</body>
+</html>
