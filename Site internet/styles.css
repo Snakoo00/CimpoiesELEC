@@ -20,11 +20,11 @@ header {
 /* Appliquer la police sans-serif au titre "Simion Électricité" */
 header h1 {
     font-family: 'Poppins', sans-serif;  /* Utilisation de Montserrat pour un look moderne */
-    font-size: 3rem; /* Ajuste la taille de la police */
-    font-weight: 600; /* Poids de la police pour un aspect plus robuste */
-    color: #FFD700; /* Couleur dorée pour un style professionnel */
+    font-size: 2rem; /* Ajuste la taille de la police */
+    font-weight: 300; /* Poids de la police pour un aspect plus robuste */
+    color: #FFFFF; /* Couleur dorée pour un style professionnel */
     text-transform: uppercase; /* Mettre le titre en majuscules pour plus de professionnalisme */
-    letter-spacing: 1.5px; /* Espacement des lettres pour un look propre */
+    letter-spacing: 1.2px; /* Espacement des lettres pour un look propre */
     margin: 0;
     padding: 0;
 }
