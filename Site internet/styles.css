@@ -159,15 +159,14 @@ footer {
 
 /* Responsive Design pour les écrans de taille mobile */
 @media (max-width: 767px) {
-    /* Section Hero */
+    /* Hero Section */
     .hero {
         padding: 120px 20px; /* Réduire le padding vertical sur mobile */
-        background-size: cover; /* Garder l'image de fond en couverture */
         min-height: 300px; /* Limiter la hauteur de la section hero */
     }
 
     .hero h2 {
-        font-size: 1.8rem; /* Réduire la taille du titre sur mobile */
+        font-size: 1.8rem; /* Réduire la taille du titre */
     }
 
     .hero p {
@@ -181,29 +180,29 @@ footer {
 
     /* Menu de navigation */
     nav ul {
-        display: block; /* Disposer les éléments en colonne sur mobile */
-        text-align: center; /* Centrer le menu */
+        display: block; /* Disposer les éléments du menu en colonne sur mobile */
+        text-align: center; /* Centrer les éléments du menu */
     }
 
     nav ul li {
-        margin: 10px 0; /* Ajouter de l'espace entre les éléments du menu */
+        margin: 10px 0; /* Espacer les éléments du menu */
     }
 
-    /* Service list (services en colonne sur mobile) */
+    /* Service list */
     .service-list {
         flex-direction: column; /* Passer à une colonne pour plus de lisibilité sur mobile */
-        gap: 15px; /* Ajouter de l'espace entre les éléments */
+        gap: 15px; /* Espacement entre les éléments */
     }
 
     /* Footer */
     footer {
-        padding: 10px; /* Réduire le padding du footer sur mobile */
+        padding: 10px; /* Réduire le padding du footer */
     }
 
     /* Zones d'intervention */
     .container {
         flex-direction: column; /* Passer à une colonne pour les zones d'intervention */
-        padding: 20px; /* Espacement ajouté autour de la section */
+        padding: 20px;
     }
 
     .zones-text h2 {
@@ -218,13 +217,13 @@ footer {
     .form-container {
         margin: 20px auto; /* Centrer le formulaire */
         padding: 20px;
-        width: 90%; /* Réduire la largeur pour les petits écrans */
+        width: 90%; /* Réduire la largeur du formulaire */
         max-width: 500px; /* Fixer une largeur maximale */
     }
 
     input, select, textarea {
-        font-size: 0.9em; /* Ajuster la taille de police des champs du formulaire */
-        padding: 8px; /* Ajuster la taille des champs */
+        font-size: 0.9em; /* Ajuster la taille des champs du formulaire */
+        padding: 8px;
     }
 
     button {
@@ -233,8 +232,7 @@ footer {
     }
 }
 
-
-/* Responsive Design pour les écrans larges */
+/* Responsive Design pour les écrans larges (sans affecter la version PC) */
 @media (min-width: 768px) {
     .hero {
         background-size: cover; /* Garder l'image de fond en couverture */
@@ -242,6 +240,6 @@ footer {
     }
 
     .service-list {
-        justify-content: space-between;
+        justify-content: space-between; /* Espacer les services sur grand écran */
     }
 }
