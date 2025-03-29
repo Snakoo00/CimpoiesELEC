@@ -159,15 +159,15 @@ footer {
 
 /* Responsive Design pour les écrans de taille mobile */
 @media (max-width: 767px) {
-    /* Hero Section */
+    /* Section Hero */
     .hero {
         padding: 120px 20px; /* Réduire le padding vertical sur mobile */
-        background-size: cover; /* Conserver l'image de fond sur mobile */
+        background-size: cover; /* Garder l'image de fond en couverture */
         min-height: 300px; /* Limiter la hauteur de la section hero */
     }
 
     .hero h2 {
-        font-size: 1.8rem; /* Réduire la taille du titre */
+        font-size: 1.8rem; /* Réduire la taille du titre sur mobile */
     }
 
     .hero p {
@@ -181,29 +181,29 @@ footer {
 
     /* Menu de navigation */
     nav ul {
-        display: block;
-        text-align: center;
+        display: block; /* Disposer les éléments en colonne sur mobile */
+        text-align: center; /* Centrer le menu */
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Ajouter de l'espace entre les éléments du menu */
     }
 
-    /* Service list */
+    /* Service list (services en colonne sur mobile) */
     .service-list {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column; /* Passer à une colonne pour plus de lisibilité sur mobile */
+        gap: 15px; /* Ajouter de l'espace entre les éléments */
     }
 
     /* Footer */
     footer {
-        padding: 10px;
+        padding: 10px; /* Réduire le padding du footer sur mobile */
     }
 
     /* Zones d'intervention */
     .container {
-        flex-direction: column; /* Passer à une colonne pour plus de lisibilité sur mobile */
-        padding: 20px;
+        flex-direction: column; /* Passer à une colonne pour les zones d'intervention */
+        padding: 20px; /* Espacement ajouté autour de la section */
     }
 
     .zones-text h2 {
@@ -216,22 +216,23 @@ footer {
 
     /* Formulaire de contact */
     .form-container {
-        margin: 20px auto;
+        margin: 20px auto; /* Centrer le formulaire */
         padding: 20px;
-        width: 90%;
-        max-width: 500px;
+        width: 90%; /* Réduire la largeur pour les petits écrans */
+        max-width: 500px; /* Fixer une largeur maximale */
     }
 
     input, select, textarea {
         font-size: 0.9em; /* Ajuster la taille de police des champs du formulaire */
-        padding: 8px;
+        padding: 8px; /* Ajuster la taille des champs */
     }
 
     button {
         font-size: 1em; /* Ajuster la taille du bouton d'envoi */
-        padding: 10px;
+        padding: 10px; /* Réduire le padding du bouton */
     }
 }
+
 
 /* Responsive Design pour les écrans larges */
 @media (min-width: 768px) {
