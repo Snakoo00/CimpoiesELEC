@@ -1,4 +1,4 @@
-/* Import de la police */
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333; /* Ajuste la couleur si besoin */
+    background-color: #333;
     color: white;
 }
 
@@ -25,7 +25,7 @@ header h1 {
 
 /* Styles pour le bouton de téléphone à gauche */
 .nav-button {
-    margin-right: 20px; /* Espace entre le bouton et le menu */
+    margin-right: 20px;
 }
 
 .nav-button .call-button {
@@ -40,14 +40,14 @@ header h1 {
 /* Menu de navigation */
 nav {
     display: flex;
-    align-items: center; /* Aligne le bouton et le menu horizontalement */
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    margin-left: 20px; /* Espace entre le bouton et les éléments du menu */
+    margin-left: 20px;
 }
 
 nav ul li {
@@ -137,6 +137,7 @@ footer {
     margin-top: 20px;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
     background-image: url('photo/back_intro.webp');
@@ -145,7 +146,6 @@ footer {
     color: white;
     padding: 180px 20px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
 
 .hero::after {
@@ -155,12 +155,12 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Gris foncé avec une opacité de 50% */
-    z-index: 1; /* S'assurer que l'overlay est au-dessus de l'image */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
 }
 
 .hero h2, .hero p, .hero .btn {
-    position: relative; /* Pour que le texte soit au-dessus de l'overlay */
+    position: relative;
     z-index: 2;
 }
 
@@ -190,9 +190,9 @@ footer {
     justify-content: center;
     gap: 40px;
     padding: 40px 20px;
-    background: white; /* Fond blanc */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    margin: auto; /* Centrer la section */
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
 }
 
 /* Carte Google Maps */
@@ -306,17 +306,70 @@ button:hover {
 
 /* Conteneur de l'icône de téléphone */
 .call-icon i {
-    font-size: 24px; /* Taille de l'icône */
-	padding: 10px 22px;
-    color: #FFD700; /* Couleur jaune #FFD700 */
-    transition: color 0.3s ease; /* Transition lors du survol */
+    font-size: 24px;
+    padding: 10px 22px;
+    color: #FFD700;
+    transition: color 0.3s ease;
 }
 
 /* Lorsque l'on survole l'icône */
 .call-icon i:hover {
-    color: #FFA500; /* Jaune plus foncé au survol */
+    color: #FFA500;
 }
 
 .call-icon a {
-    text-decoration: none; /* Supprime le soulignement */
+    text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Sections */
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .zones-text h2 {
+        font-size: 20px;
+    }
+
+    .zones-text p {
+        font-size: 14px;
+    }
+
+    /* Menu */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Form */
+    .form-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Call button */
+    .call-button {
+        bottom: 10px;
+        right: 10px;
+        padding: 12px;
+    }
 }
