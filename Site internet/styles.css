@@ -336,40 +336,19 @@ button:hover {
     }
 
     .nav-button {
-        margin-bottom: 5px; /* Espace entre le bouton et le menu */
+        display: none; /* Masquer le bouton de téléphone sur mobile */
     }
 
-    /* Menu de navigation */
+    /* Menu de navigation : On cache les liens (Accueil, Services, etc.) */
     nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        width: 100%; /* Assure que le menu prend toute la largeur de l'écran */
-        display: flex;
-        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
-        justify-content: center; /* Centre le contenu */
+        display: none; /* On masque le menu de navigation sur mobile */
     }
 
-    nav ul li {
-        width: 50%; /* Chaque élément occupe 50% de la largeur */
-        margin-bottom: 10px; /* Espace vertical entre les éléments */
-        text-align: center; /* Centre les éléments */
-    }
-
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.2rem;
-        display: block; /* Assure que chaque élément occupe toute la largeur disponible */
-        text-align: center; /* Centre les liens */
-    }
-
-    /* Disposition des logos sur une ligne en dessous */
+    /* Icônes des logos : téléphone et mail centrés */
     .call-icon {
         display: flex;
         justify-content: center;
-        margin-top: 20px; /* Espacement entre la deuxième ligne du menu et les icônes */
+        margin-top: 20px; /* Espacement entre les icônes et le reste du menu */
         width: 100%; /* Prend toute la largeur */
     }
 
@@ -461,4 +440,3 @@ button:hover {
         font-size: 14px; /* Réduit la taille du texte */
     }
 }
-
